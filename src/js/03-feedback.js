@@ -11,7 +11,10 @@ const saveLocal = e => {
   const newObj = JSON.stringify(obj);
   localStorage.setItem(LOCAL_KEY, newObj);
 };
-form.addEventListener('input', throttle(saveLocal), 500);
+
+// const throttledSaveFormState = throttle(saveFormState, 500);
+
+// form.addEventListener('input', throttledSaveFormState);
 
 const getLocalData = () => {
   const objLocal = localStorage.getItem(LOCAL_KEY);
